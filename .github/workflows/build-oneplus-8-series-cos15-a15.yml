@@ -134,15 +134,6 @@ jobs:
       - name: 🚀 Build Process
         uses: ./.github/workflows/build-process
 
-      - name: ❗ Oneplus 8 Remove files
-        run: |
-          # Only ${{ env.DEVICE_NAME }} use it.
-          cd $GITHUB_WORKSPACE/device_kernel
-
-          rm -f out/arch/arm64/boot/dtbo.img
-          rm -f out/arch/arm64/boot/dtb
-          echo "Removed dtbo.img and dtb for Oneplus 8."
-
       - name: 🔩 Pack Process
         uses: ./.github/workflows/pack-process
 
